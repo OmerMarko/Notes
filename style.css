@@ -1,0 +1,145 @@
+/* bootstrap glyphs */
+
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+
+/* local fonts */
+
+@font-face {
+  font-family: "Note";
+  src: url(assets/fonts/Note.ttf);
+}
+
+
+body {
+  width: 100%;
+  font-family: Note;
+  background-image: url(assets/images/lightwood.jpg);
+  background-size: cover;
+}
+
+h1 {
+  margin-top: 50px;
+}
+
+/* form element */
+
+form {
+  font-size: x-large;
+  background-image: url(assets/images/notebook.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: rgba(230, 211, 178, 0.63); */
+}
+
+
+/* form class */
+
+.form {
+  padding: 86px 50px 50px 100px;
+  font-size: xx-large;
+}
+
+form button{
+  margin-top: -10px;
+}
+
+.form .btn:hover {
+  color: white;
+}
+
+input[type="date"],
+input[type="time"] {
+  text-align: left;
+  direction: ltr;
+}
+
+input[type="date"]:hover,
+input[type="time"]:hover {
+  text-align: left;
+  cursor: pointer;
+}
+
+/* font size in the form */
+
+.font-control {
+  font-size: x-large;
+}
+
+/* notes display */
+
+.notesTable {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 50px;
+}
+
+.note {
+  background-image: url(assets/images/note.png);
+  background-size: cover;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 300px;
+  height: 300px;
+  margin: 10px 10px 50px 13px;
+  padding: 60px 20px 10px 20px;
+  word-break: break-all;
+  position: relative;
+}
+
+/* note fade in with last child */
+
+.note.fade-in {
+  animation: fade-in 0.5s ease-in;
+  animation-fill-mode: both;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+/* ends here */
+
+
+
+.note .content {
+  height: 70%;
+  overflow: auto;
+  position: relative;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+.note p {
+  margin-bottom: 0;
+  font-size: large;
+}
+
+/* button x */
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+
+.note:hover .close-button {
+  color: white;
+  background-color: red;
+  border: 10px;
+  opacity: 1;
+  padding: 5px;
+  border-radius: 20px;
+}
+
